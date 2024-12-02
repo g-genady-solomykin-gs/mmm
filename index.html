@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Trade</title>
+    <link rel="stylesheet" href="libs/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="trade" id="init__trade">
+        <div class="container">
+            <div class="trade-wrapper">
+                <div class="trade-wrapper__header">
+                    <div class="trade-wrapper__header-logo">
+                        <a href="/"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="trade-wrapper__header-buttons">
+                        <a href="#" data-count="6" class="trade-wrapper__header-button">Watchlist</a>
+                        <a href="#" data-count="3" class="trade-wrapper__header-button">+3 KOL Calls</a>
+                        <a href="#" data-count="5" class="trade-wrapper__header-button">New Projects</a>
+                    </div>
+                    <div class="trade-wrapper__header-user">
+                        <div class="trade-wrapper__header-icon">
+                            <img src="img/icon/user.svg" alt="user">
+                        </div>
+                        <div class="trade-wrapper__header-name">
+                            <span>Andrew M.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="switch-and-search">
+                <div class="switch-and-search-wrapper">
+                    <div class="switch-and-search-wrapper__select">
+                        <div class="switch-and-search-wrapper__select-toggle"><span>15m</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>30m</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span class="active">1h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>2h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>5h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>7h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>10h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>21h</span></div>
+                        <div class="switch-and-search-wrapper__select-toggle"><span>24h</span></div>
+                    </div>
+                    <form class="switch-and-search-wrapper__search" action="#" method="GET">
+                        <div class="switch-and-search-wrapper__search-control">
+                            <input type="text" placeholder="Search by Twitter Handle">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица целиком -->
+            <div class="table">
+              <div class="table__header">
+                <div class="table__left-column table__header-item" style="z-index: 15; padding-left: 75px;">Project</div>
+                <div class="table__header-item">Age</div>
+                <div class="table__header-item">New KOLs</div>
+                <div class="table__header-item">24h</div>
+                <div class="table__header-item">Watchlist</div>
+                <div class="table__header-item">KOL Breakdown</div>
+                <div class="table__header-item">Hashtags</div>
+                <div class="table__header-item">Notes</div>
+              </div>
+          
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+              <div class="table__row">
+                <div class="table__left-column table__row-item">
+                    <div class="table__row-item-box">
+                        <i class="table__row-item-star"></i>
+                        <a href="#" class="table__row-item-preview">
+                            <img src="img/author.png" alt="author">
+                        </a>
+                        <a href="#" class="table__row-item-name">NATHAN</a>
+                        <div class="table__row-item-missile" data-link-missile="#"></div>
+                        <div class="popup popup-missile">
+                            <h6 class="title popup-missile__title">Some text bla bla blah if it needed</h6>
+                            <div class="popup-missile__control">
+                                <input type="text" class="inputField popup-missile__inputField" placeholder="Enter your link here">
+                                <button class="submitButton popup-missile__submitButton" disabled>Save</button>
+                            </div>
+                        </div>
+                        <a href="#"><img src="img/icon/eye.svg" alt="eye"></a>
+                    </div>
+                </div>
+                <div class="table__row-item thisk">6d</div>
+                <div class="table__row-item green">+3</div>
+                <div class="table__row-item">+7</div>
+                <div class="table__row-item">4</div>
+                <div class="table__row-item">
+                    <div class="table__row-item-box">
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value yelow">14</div>
+                            <span class="table__row-item-title">Total</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">10</div>
+                            <span class="table__row-item-title">Degen</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">3</div>
+                            <span class="table__row-item-title">VC</span>
+                        </div>
+                        <div class="table__row-item-total">
+                            <div class="table__row-item-value">1</div>
+                            <span class="table__row-item-title">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row-item hashtags">
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#86F89B; color: #86F89B;"
+                    >Buying &bull; <span>48</span>
+                    </button>
+                    <button 
+                        class="table__row-item-btn" 
+                        style="border-color:#847BFF; color: #847BFF;"
+                    >NFT
+                    </button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFAF84; color: #FFAF84;"
+                    >Founder</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#F08080; color: #F08080;"
+                    >Art</button>
+                    <button 
+                        class="table__row-item-btn"
+                        style="border-color:#FFD700; color: #FFD700;"
+                    >Gold</button>
+                </div>
+                                               
+                <form class="table__row-item">
+                    <textarea class="table__row-item-comment" placeholder="Write here..."></textarea>
+                    <div class="table__row-item-notification" data-open-notes-popup>
+                        <span>5</span>
+                    </div>
+                </form>
+              </div>
+
+            </div>
+
+
+
+            <!-- //Подвал с попапом -->
+            <div class="notes">
+                <div class="container">
+                    <div class="notes-wrapper">
+                        <div class="notes-wrapper__action" data-open-notes-popup>
+                            <img src="img/icon/icon-bottom-notes.svg" alt="notes">
+                            <span class="notes-wrapper__action-name">Notes</span>
+                        </div>
+                        <div class="notes-wrapper__tool">
+                            <a href="#" class="notes-wrapper__tool-what">How this tool works?</a>
+                            <span class="notes-wrapper__tool-update">Last Update: 17 June 2024, 5:30pm</span>
+                        </div>
+                        <div class="notes-wrapper__popup">
+                            <ul class="notes-wrapper__popup-list">
+                                <li class="notes-wrapper__popup-article">
+                                    <div class="notes-wrapper__popup-header">
+                                        <i class="notes-wrapper__popup-header--icon">
+                                            <span>Username</span>
+                                        </i>
+                                        <div class="notes-wrapper__popup-header--user">
+                                            <img src="img/min-user.png" alt="min-user">
+                                            <span>BABYBTC</span>
+                                        </div>
+                                        <div class="notes-wrapper__popup-header--hour">
+                                            <span>2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="notes-wrapper__popup-contents">
+                                        <div class="notes-wrapper__popup-contents--message">
+                                            <span>
+                                                Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam,
+                                                sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notes-wrapper__popup-article">
+                                    <div class="notes-wrapper__popup-header">
+                                        <i class="notes-wrapper__popup-header--icon">
+                                            <span>Username</span>
+                                        </i>
+                                        <div class="notes-wrapper__popup-header--user">
+                                            <img src="img/min-user.png" alt="min-user">
+                                            <span>BABYBTC</span>
+                                        </div>
+                                        <div class="notes-wrapper__popup-header--hour">
+                                            <span>2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="notes-wrapper__popup-contents">
+                                        <div class="notes-wrapper__popup-contents--message">
+                                            <span>
+                                                Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam,
+                                                sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notes-wrapper__popup-article">
+                                    <div class="notes-wrapper__popup-header">
+                                        <i class="notes-wrapper__popup-header--icon">
+                                            <span>Username</span>
+                                        </i>
+                                        <div class="notes-wrapper__popup-header--user">
+                                            <img src="img/min-user.png" alt="min-user">
+                                            <span>BABYBTC</span>
+                                        </div>
+                                        <div class="notes-wrapper__popup-header--hour">
+                                            <span>2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="notes-wrapper__popup-contents">
+                                        <div class="notes-wrapper__popup-contents--message">
+                                            <span>
+                                                Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam,
+                                                sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notes-wrapper__popup-article">
+                                    <div class="notes-wrapper__popup-header">
+                                        <i class="notes-wrapper__popup-header--icon">
+                                            <span>Username</span>
+                                        </i>
+                                        <div class="notes-wrapper__popup-header--user">
+                                            <img src="img/min-user.png" alt="min-user">
+                                            <span>BABYBTC</span>
+                                        </div>
+                                        <div class="notes-wrapper__popup-header--hour">
+                                            <span>2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="notes-wrapper__popup-contents">
+                                        <div class="notes-wrapper__popup-contents--message">
+                                            <span>
+                                                Vestibulum ut velit ultrices, consequat risus sed, semper dolor. Aliquam semper pulvinar diam,
+                                                sed bibendum tellus congue ac. In lorem est, pharetra non tincidunt vel
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    
+
+    <script src="js/class/table_init.js"></script>
+
+</body>
+</html>
